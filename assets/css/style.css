@@ -1,3 +1,35 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    background-image: url("https://stmed.net/sites/default/files/elemental-wallpapers-28129-5603102.jpg");
+    background-position: center;
+}
+
+h4 {
+    margin: 1em 0 1em 2em;
+}
+.jumbotron {
+    margin: 7em 7em;
+    
+    background-color: rgba(19, 18, 18, 0.589);
+    /* Experimental Feature must be turned on in chrome://flags/ 
+        -->Experimental Web Platform Features */
+    backdrop-filter: blur(10px);   
+    -webkit-backdrop-filter: blur(10px);  
+    /* border: 5px solid #f4f8f780; */
+}
+
+.score-board {
+    background-color: rgba(63, 61, 61, 0.589);
+    border: 5px solid #f4f8f780;
+}
+
+#elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 3em 1em;
+}
 .element-image {
     width: 100px;
     height: auto;

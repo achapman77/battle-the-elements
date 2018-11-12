@@ -20,18 +20,20 @@ var imageArray = ["assets/images/fire.png",
 
 //function that could take in two ints and pass these to our math.random
 
-function randomValue(max, min) {
-  return Math.floor((Math.random() * (max - min)+1));
-};
+
 
 function reset() {
     counter = 0;
-    // var targetNumber = randomValue(120,19);
-    // for (var i = 0; i < imageArray.length; i++) {
-    // imageElement.attr("data-elementvalue", randomValue(12, 1));
-    // };
+    var targetNumber = randomValue(120,19);
+    for (var i = 0; i < imageArray.length; i++) {
+    imageElement.attr("data-elementvalue", randomValue(12, 1));
+    };
 
 };
+
+function randomValue(max, min) {
+    return Math.floor((Math.random() * (max - min)+1));
+  };
 
 for (var i = 0; i < imageArray.length; i++) {
     

@@ -7,34 +7,61 @@
     <!-- Reset CSS -->
     <link rel="stylesheet" href="assets/css/reset.css"
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Element Picker</title>
   </head>
   <body>
-    <h1>Crystal Collector</h1>
+    <div class="jumbotron">
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-md-6 col-sm-12">
+                <div>
+                    <h3>Elemental Collector</h3>
+                </div>
+                <div>
+                    <p>You will be given a random number at the start of the game.</p>
+                    <p>There are four elements below.  By clicking on a crystal you will add a specific amount of points to your Total Score.</p>
+                    <p>You win a game by matching your total score to the random Target Number.  You lose a game if your total score goes above the Target Number</p>
+                    <p>The numerical value of each element is hidden.</p>
+                    <p>Each time a new game starts, the value of each crystal will change.</p>
+                </div>
+            </div>
+                    
+            <!-- Right Column -->
+            <div class="col-md-6 col-xs-12 score-board">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-6">
+                        <h4>Target Number:</h4>
+                        <h4>Total Score Is:</h4>   
+                        <h4>Wins:</h4>
+                        <h4>Losses:</h4>        
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <h4 id="target-number"></h4>
+                        <h4 id="counter"></h4>
+                        <h4 id="wins"></h4>
+                        <h4 id="losses"></h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <h4 id="game-message">Hello</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="elements"></div>   
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
     
-    <div>
-        <h2>Instruction Box</h2>
-    </div>
-    <div>
-        <h2>Target Score</h2>
-        <div id="target-number"></div>
-    </div>
-    <div>
-        <h2>Wins & Losses</h2>
-        <div id="game-message"></div>
-        <div id="wins"></div>
-        <div id="losses"></div>
-    </div>
-    <h2>Elements:</h2>
-    <div id="elements"></div>
-    <div>
-        <h2>Your total score is:</h2>
-        <div id="counter"></div>
-    </div>
+
 
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
