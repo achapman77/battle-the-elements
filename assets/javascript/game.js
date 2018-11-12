@@ -26,7 +26,7 @@ $(function() {
 
     //Generates random numbers for both target number and values assiged to Elementals.
     function randomValue(max, min) {
-        return Math.floor((Math.random() * (max - min)+1));
+        return Math.floor((Math.random() * (max - min)+ min));
     };
 
     //Deletes images & attr to clear way for new images & attr.
@@ -38,7 +38,7 @@ $(function() {
     }
 
     function resetGame() {
-        var counter = 0;
+        counter = 0;
         $("#counter").text(counter);
 
         targetNumber = randomValue(120,19);
@@ -67,7 +67,7 @@ $(function() {
     resetGame()
     
 
-    $(".element-image").on("click", function() {
+    $(document).on("click", ".element-image", function() {
         var elementValue = ($(this).attr("data-elementvalue"));
         elementValue = parseInt(elementValue);
         
