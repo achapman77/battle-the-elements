@@ -2,32 +2,48 @@
 // wins, losses, targetScore, userScore
 var wins = 0;
 var losses = 0;
-
-var targetNumber = 50;
+var counter = 0;
+var targetNumber = randomValue(120, 19);
+var winMessage = "You Win!"
+var loseMessage = "You Lose!"
 
 $("#target-number").text(targetNumber);
 $("#wins").text(wins);
 $("#losses").text(losses);
+// $("#counter").text(counter);
 
 
-var counter = 0;
+var imageArray = ["assets/images/fire.png",
+"assets/images/water.png",
+"assets/images/air.png",
+"assets/images/earth.png"];
 
+//function that could take in two ints and pass these to our math.random
 
-var numberOptions = [10, 11, 5, 7];
-var increment = numberOptions[Math.round(Math.random())];
+function randomValue(max, min) {
+  return Math.floor((Math.random() * (max - min)+1));
+};
 
-for (var i = 0; i < numberOptions.length; i++) {
+function reset() {
+    counter = 0;
+    // var targetNumber = randomValue(120,19);
+    // for (var i = 0; i < imageArray.length; i++) {
+    // imageElement.attr("data-elementvalue", randomValue(12, 1));
+    // };
 
+};
+
+for (var i = 0; i < imageArray.length; i++) {
+    
     var imageElement = $("<img>");
     
     imageElement.addClass("element-image");
-    imageElement.attr("src", "assets/images/fire.png");
-    imageElement.attr("data-elementvalue", numberOptions[i]);
+    imageElement.attr("src", imageArray[i]);
+    imageElement.attr("data-elementvalue", randomValue(12, 1));
     $("#elements").append(imageElement);
+    console.log($(imageElement).attr("data-elementvalue"));
+    
 };
-
-
-
 
 $(".element-image").on("click", function() {
     var elementValue = ($(this).attr("data-elementvalue"));
@@ -39,9 +55,13 @@ $(".element-image").on("click", function() {
 
     if (counter === targetNumber) {
         wins++;
+        $("#game-message").text(winMessage);
+        reset();
         // alert("you win");
     } else if (counter >= targetNumber) {
         losses++;
+        $("#game-message").text(loseMessage);
+        reset();
         // alert("you lose");
     }
 });
