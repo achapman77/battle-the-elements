@@ -4,12 +4,16 @@ body {
     background-image: url("https://stmed.net/sites/default/files/elemental-wallpapers-28129-5603102.jpg");
     background-position: center;
 }
+h1 {
+    border-bottom: 1px solid whitesmoke;
+    margin-bottom: 1em;
+}
 
 h4 {
-    margin: 1em 0 1em 2em;
+    margin: 1em 0 0.25em 3em;
 }
 .jumbotron {
-    margin: 7em 7em;
+    margin: 7em 0;
     
     background-color: rgba(19, 18, 18, 0.589);
     /* Experimental Feature must be turned on in chrome://flags/ 
@@ -22,12 +26,32 @@ h4 {
 .score-board {
     background-color: rgba(63, 61, 61, 0.589);
     border: 5px solid #f4f8f780;
+    margin-right: 0 2em;
+}
+
+.board-row{
+    border-bottom: 1px solid whitesmoke;
+}
+
+.game-message-container {
+    height: 3em;
+}
+
+#game-message {
+    color:  rgba(245, 190, 72, 0.767);
+    background-color: rgba(19, 18, 18, 0.555);
+    margin: 0.25em 0;
+    /* border: 0.5px solid whitesmoke; */
+    border-radius: 5px;
+    text-align: center;
+    font-size: 3em;
 }
 
 #elements {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    height: 100px;
     margin: 3em 1em;
 }
 .element-image {

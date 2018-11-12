@@ -11,56 +11,81 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Element Picker</title>
+    <title>Battle the Elements</title>
   </head>
   <body>
-    <div class="jumbotron">
-        <div class="row">
-            <!-- Left Column -->
-            <div class="col-md-6 col-sm-12">
-                <div>
-                    <h3>Elemental Collector</h3>
-                </div>
-                <div>
-                    <p>You will be given a random number at the start of the game.</p>
-                    <p>There are four elements below.  By clicking on a crystal you will add a specific amount of points to your Total Score.</p>
-                    <p>You win a game by matching your total score to the random Target Number.  You lose a game if your total score goes above the Target Number</p>
-                    <p>The numerical value of each element is hidden.</p>
-                    <p>Each time a new game starts, the value of each crystal will change.</p>
-                </div>
-            </div>
-                    
-            <!-- Right Column -->
-            <div class="col-md-6 col-xs-12 score-board">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1 col-sm-12">
+            <div class="jumbotron">
                 <div class="row">
-                    <div class="col-sm-6 col-xs-6">
-                        <h4>Target Number:</h4>
-                        <h4>Total Score Is:</h4>   
-                        <h4>Wins:</h4>
-                        <h4>Losses:</h4>        
-                    </div>
-                    <div class="col-sm-4 col-xs-4">
-                        <h4 id="target-number"></h4>
-                        <h4 id="counter"></h4>
-                        <h4 id="wins"></h4>
-                        <h4 id="losses"></h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-xs-12">
-                        <h4 id="game-message"></h4>
-                    </div>
-                </div>
-                <div class="row image-container">
                     <div class="col-md-12">
-                        <div id="elements"></div>   
+                        <h1>Battle the Elements:</h1>
                     </div>
                 </div>
+                <div class="row">
+                    <!-- Left Column -->
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div>
+                            
+                        </div>
+                        <div>
+                            <p>You will be given a random Target Number at the start of the game.</p>
+                            <p>There are four Elementals below.  By clicking on an Elemental you will add a specific amount of points to Your Score.</p>
+                            <p>However, the numerical value of each Elemental is hidden.</p>
+                            <p>You win a game by working out the math to exactly match Your Score to the Target Number.</p>
+                            <p>You lose a game if Your Score goes above the Target Number</p>
+                            <p>Each time a new game starts, the value of each Elemental will change.</p>
+                        </div>
+                    </div>
+                            
+                    <!-- Right Column -->
+                    <div class="col-lg-6 col-md-12 offset-lg-1 col-xs-12 score-board">
+                        <div class="row">
+                            <div class="col-md-8 col-xxs-8">
+                                <div class="board-row">
+                                    <h4>Target Number:</h4>
+                                </div>
+                                <div class="board-row">
+                                    <h4>Your Score:</h4>
+                                </div>
+                                <div class="board-row">  
+                                    <h4>Wins:</h4>
+                                </div>
+                                <div class="board-row">
+                                    <h4>Losses:</h4>
+                                </div> 
+                            </div>
+                            <div class="col-md-4 col-xxs-4">
+                                <div class="board-row">
+                                    <h4 id="target-number"></h4>
+                                </div>
+                                <div class="board-row">
+                                    <h4 id="counter"></h4>
+                                </div>
+                                <div class="board-row">
+                                    <h4 id="wins"></h4>
+                                </div>
+                                <div class="board-row">
+                                    <h4 id="losses"></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-xs-12 game-message-container">
+                                <h4 id="game-message"></h4>
+                            </div>
+                        </div>
+                        <div class="row image-container">
+                            <div class="col-md-12">
+                                <div id="elements"></div>   
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-            
         </div>
     </div>
-    
 
 
     
