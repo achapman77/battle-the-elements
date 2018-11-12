@@ -10,10 +10,10 @@ $(function() {
     var loseMessage = "YOU LOSE!"
 
     
-    var imageArray = ["assets/images/fire.png",
-    "assets/images/water.png",
-    "assets/images/air.png",
-    "assets/images/earth.png"];
+    var imageArray = ["assets/images/fire-monster.png",
+    "assets/images/water-elemental.png",
+    "assets/images/air-elemental.png",
+    "assets/images/earth-elemental.png"];
 
 
     //Displays score board vaules
