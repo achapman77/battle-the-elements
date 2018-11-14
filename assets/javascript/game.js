@@ -67,7 +67,7 @@ $(function() {
     resetGame()
     
 
-    $(document).on("click", ".element-image", function() {
+    $("#elements").on("click", ".element-image", function() {
         var elementValue = ($(this).attr("data-elementvalue"));
         elementValue = parseInt(elementValue);
         

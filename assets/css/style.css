@@ -11,26 +11,63 @@ h1 {
 
 h4 {
     margin: 1em 0 0.25em 3em;
+    font-weight: 900;
+    animation-name: fontColorChange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
+@keyframes fontColorChange {
+    0% {color: whitesmoke;}
+    30% {color: rgb(209, 6, 6);}
+    60% {color: rgb(6, 22, 248);}
+    90% {color: rgb(246, 182, 62);}
+    100% {color: whitesmoke;} 
+}
+
+p {
+    font-size: 1.2em; 
+}
+
 .jumbotron {
-    margin: 7em 0;
+    margin: 5em 0;
     
     background-color: rgba(19, 18, 18, 0.589);
     /* Experimental Feature must be turned on in chrome://flags/ 
         -->Experimental Web Platform Features */
-    backdrop-filter: blur(10px);   
-    -webkit-backdrop-filter: blur(10px);  
+    backdrop-filter: blur(5px);   
+    -webkit-backdrop-filter: blur(5px);  
     /* border: 5px solid #f4f8f780; */
 }
 
 .score-board {
-    background-color: rgba(63, 61, 61, 0.589);
-    border: 5px solid #f4f8f780;
+    background-color: rgba(20, 20, 20, 0.63);
+    border: 1px solid #f4f8f780;
+    border-radius: 5px;
     margin-right: 0 2em;
+    animation-name: borderChange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes borderChange {
+    0% {border: 1px solid whitesmoke;}
+    30% {border: 1px solid rgb(209, 6, 6);}
+    60% {border: 1px solid rgb(6, 22, 248);}
+    90% {border: 1px solid rgb(246, 182, 62);}
+    100% {border: 1px solid whitesmoke;}
 }
 
 .board-row{
     border-bottom: 1px solid whitesmoke;
+    animation-name: borderColorChange;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes borderColorChange {
+    0% {border-bottom: 1px solid whitesmoke;}
+    30% {border-bottom: 1px solid rgb(209, 6, 6);}
+    60% {border-bottom: 1px solid rgb(6, 22, 248);}
+    90% {border-bottom: 1px solid rgb(246, 182, 62);}
+    100% {border-bottom: 1px solid whitesmoke;}
 }
 
 .game-message-container {
@@ -47,6 +84,7 @@ h4 {
     font-size: 3em;
 }
 
+
 #elements {
     display: flex;
     flex-direction: row;
@@ -57,4 +95,16 @@ h4 {
 .element-image {
     width: 125px;
     height: auto;
+}
+
+.element-image:hover {
+    animation-name: growMonster;
+    animation-duration: 4s;
+    cursor: url('favicon.ico'), pointer;
+    
+}
+@keyframes growMonster {
+    0% {width: 125px;}
+    5% {transform: translateY(-1em) scale(1.25, 1.25);}
+    100% {transform: scale(1, 1);}
 }
