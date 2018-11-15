@@ -27,11 +27,11 @@ Each time a new game starts, the value of each Elemental will change.
     * Bootstrap
 
 ## Features to Add:
-- [] Sound effects for click events
-- [] Sound effects for win/lose message
-- [] Calculate if possible/ not possible to achieve target number and reset game if not possible with no penalty to user.
-- [] If possible, calculate min number of moves to achieve.
-- [] Game Timer
-- [] Leader board of fastest times to win 10 games.
-- [] Leader board of min-number of clicks to win 10 games.
+- [ ] Sound effects for click events
+- [ ] Sound effects for win/lose message
+- [ ] Calculate if possible/ not possible to achieve target number and reset game if not possible with no penalty to user.
+- [ ] If possible, calculate min number of moves to achieve.
+- [ ] Game Timer
+- [ ] Leader board of fastest times to win 10 games.
+- [ ] Leader board of min-number of clicks to win 10 games.
 
