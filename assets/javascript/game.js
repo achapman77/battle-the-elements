@@ -29,14 +29,6 @@ $(function() {
         return Math.floor((Math.random() * (max - min)+ min));
     };
 
-    //Deletes images & attr to clear way for new images & attr.
-    // Called in reset function below
-    function deleteElementals () {
-        for (var i = 0; i < imageArray.length; i++) {
-            $("#elements img").remove();
-        };
-    }
-
     function resetGame() {
         counter = 0;
         $("#counter").text(counter);
@@ -57,11 +49,17 @@ $(function() {
             imageElement.addClass("element-image");
             imageElement.attr("src", imageArray[i]);
             imageElement.attr("data-elementvalue", randomValue(12, 1));
+            //Add Id to each image to be referenced for specific  onClick sounds?  Think I will need to refer to "bubbling"
+            imageElement.attr("id", "elemental-" + i);
             $("#elements").append(imageElement);
             console.log($(imageElement).attr("data-elementvalue"));
             
         };
     }
+    //Define click sounds linked to IDs to be called in on click function
+    function elementalClickSound () {
+
+    };
     
     displayScoreBoard();
     resetGame()
@@ -79,15 +77,15 @@ $(function() {
             wins++;
             $("#wins").text(wins);
             $("#game-message").text(winMessage);
+            //Play Win Sound
             resetGame();
-            // displayElements();
             // alert("you win");
         } else if (counter >= targetNumber) {
             losses++;
             $("#losses").text(losses);
             $("#game-message").text(loseMessage);
+            //Play Lose Sound
             resetGame();
-            // displayElements();
             // alert("you lose");
         }
     });
